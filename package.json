@@ -1,0 +1,48 @@
+{
+  "name": "benison",
+  "version": "1.0.0",
+  "description": "",
+  "source": [
+    "src/about.html",
+    "src/contact.html",
+    "src/index.html",
+    "src/media.html",
+    "src/products.html"
+  ],
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "default": {
+      "includeNodeModules": true,
+      "distDir": "./bnsc"
+    }
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "dev": "rimraf dist && parcel --log-level verbose --open chrome --port 666",
+    "build": "rimraf bnsc && parcel build --public-url ./ --detailed-report 100"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@parcel/compressor-brotli": "^2.7.0",
+    "@parcel/compressor-gzip": "^2.7.0",
+    "@parcel/optimizer-esbuild": "^2.7.0",
+    "@parcel/reporter-bundle-analyzer": "^2.7.0",
+    "@parcel/resolver-glob": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
+    "jquery": "^3.6.1",
+    "parcel": "^2.7.0",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4",
+    "sharp": "^0.29.3"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2",
+    "lightbox2": "^2.11.3"
+  }
+}
